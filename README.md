@@ -8,7 +8,6 @@ Project ini menggunakan MySQL sebagai database dan JDBC untuk koneksi database.
 - Kelola kamar (CRUD)
 - Kelola penghuni (CRUD)
 - Kelola pembayaran (CRUD)
-- Validasi data sederhana
 - Konsol interaktif untuk navigasi menu
 
 ## Teknologi
