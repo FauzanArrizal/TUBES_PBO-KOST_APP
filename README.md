@@ -112,11 +112,6 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
           harga_per_bulan DECIMAL(10, 2) NOT NULL, -- Harga sewa per bulan
           status ENUM('KOSONG', 'TERISI') NOT NULL DEFAULT 'KOSONG' -- Status ketersediaan kamar
       );
-      
-      -- --------------------------------------------------------
-      -- Struktur Tabel penghuni
-      -- Digunakan untuk menyimpan data pribadi penghuni dan kamar yang ditempati.
-      -- --------------------------------------------------------
       CREATE TABLE penghuni (
           id_penghuni INT AUTO_INCREMENT PRIMARY KEY, -- Primary Key, auto-increment untuk identifikasi unik penghuni
           nama_lengkap VARCHAR(100) NOT NULL, -- Nama lengkap penghuni
@@ -125,11 +120,6 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
           id_kamar INT UNIQUE, -- Foreign Key ke tabel kamar, satu penghuni hanya bisa menempati satu kamar
           FOREIGN KEY (id_kamar) REFERENCES kamar(id_kamar) -- Definisi Foreign Key relationship
       );
-      
-      -- --------------------------------------------------------
-      -- Struktur Tabel pembayaran
-      -- Digunakan untuk mencatat setiap transaksi pembayaran dari penghuni.
-      -- --------------------------------------------------------
       CREATE TABLE pembayaran (
           id_pembayaran INT AUTO_INCREMENT PRIMARY KEY, -- Primary Key, auto-increment untuk identifikasi unik pembayaran
           id_penghuni INT NOT NULL, -- Foreign Key ke tabel penghuni
