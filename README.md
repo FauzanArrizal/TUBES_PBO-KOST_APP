@@ -173,29 +173,67 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 ## Struktur Proyek
 
 ```
-TUBES_PBO-KOST_APP/
-├── src/main/java/
-│   ├── controller/  (Kelas Servlet, pengendali logika aplikasi)
-│   ├── dao/         (Data Access Objects, interaksi dengan database)
-│   ├── model/       (POJO - Plain Old Java Objects, representasi data)
-│   └── util/        (Kelas utilitas, misal DBConnection)
-├── src/main/webapp/
-│   ├── WEB-INF/
-│   │   └── lib/     (Lokasi JAR library eksternal)
-│   │   └── web.xml  (Konfigurasi Servlet dan Filter)
-│   ├── css/         (File CSS)
-│   ├── js/          (File JavaScript)
-│   ├── img/         (File Gambar/Aset)
-│   ├── dashboard.jsp
-│   ├── kamar.jsp
-│   ├── penghuni.jsp
-│   ├── pembayaran.jsp
-│   ├── laporan.jsp
-│   ├── login.jsp
-│   └── ... (File JSP lainnya)
-├── pom.xml          (Jika menggunakan Maven)
-├── README.md        (File ini)
-└── db_kost.sql      (File schema database - pastikan Anda membuatnya)
+AplikasiKost/
+├── 📁 build/                     // Folder hasil kompilasi (tidak perlu di-push ke GitHub)
+├── 📁 dist/                      // Folder berisi file .war untuk deployment (tidak perlu di-push)
+├── 📁 nbproject/                 // File konfigurasi khusus NetBeans
+├── 📁 src/
+│   └── 📁 java/
+│       ├── 📦 controller
+│       │   ├── 📄 AuthenticationFilter.java
+│       │   ├── 📄 DashboardServlet.java
+│       │   ├── 📄 EditKamarServlet.java
+│       │   ├── 📄 EditPembayaranServlet.java
+│       │   ├── 📄 EditPenghuniServlet.java
+│       │   ├── 📄 KamarServlet.java
+│       │   ├── 📄 LaporanServlet.java
+│       │   ├── 📄 LoginServlet.java
+│       │   ├── 📄 LogoutServlet.java
+│       │   ├── 📄 PembayaranServlet.java
+│       │   ├── 📄 PenghuniServlet.java
+│       │   └── 📄 StrukServlet.java
+│       ├── 📦 dao
+│       │   ├── 📄 KamarDAO.java
+│       │   ├── 📄 PembayaranDAO.java
+│       │   ├── 📄 PenghuniDAO.java
+│       │   └── 📄 UserDAO.java
+│       ├── 📦 model
+│       │   ├── 📄 Kamar.java
+│       │   ├── 📄 Pembayaran.java
+│       │   ├── 📄 Penghuni.java
+│       │   └── 📄 User.java
+│       └── 📦 utils
+│           ├── 📄 CreateAdminUser.java
+│           └── 📄 DatabaseConnection.java
+│
+├── 📁 test/                      // Folder untuk file-file pengujian
+│   └── ...
+│
+├── 📁 web/ (atau Web Pages)
+│   ├── 📁 img/
+│   │   └── 🖼️ Pinterest-19.jpg
+│   ├── 📁 layout/
+│   │   ├── 📄 footer.jsp
+│   │   └── 📄 header.jsp
+│   ├── 📁 WEB-INF/
+│   │   ├── 📁 lib/
+│   │   │   ├── 📜 jbcrypt-0.4.jar
+│   │   │   ├── 📜 jstl-1.2.jar
+│   │   │   └── 📜 mysql-connector-j-....jar
+│   │   └── 📄 web.xml
+│   │
+│   ├── 📄 edit_kamar.jsp
+│   ├── 📄 edit_pembayaran.jsp
+│   ├── 📄 edit_penghuni.jsp
+│   ├── 📄 index.jsp (Dashboard)
+│   ├── 📄 kamar.jsp
+│   ├── 📄 laporan.jsp
+│   ├── 📄 login.jsp
+│   ├── 📄 pembayaran.jsp
+│   ├── 📄 penghuni.jsp
+│   └── 📄 struk.jsp
+│
+└── 📄 build.xml   
 ```
 
 ## Verifikasi & Validasi (Pengujian)
