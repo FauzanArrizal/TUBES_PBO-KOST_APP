@@ -174,8 +174,8 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
 ```
 AplikasiKost/
-├── 📁 build/                     // Folder hasil kompilasi (tidak perlu di-push ke GitHub)
-├── 📁 dist/                      // Folder berisi file .war untuk deployment (tidak perlu di-push)
+├── 📁 build/                     // Folder hasil kompilasi
+├── 📁 dist/                      // Folder berisi file .war untuk deployment
 ├── 📁 nbproject/                 // File konfigurasi khusus NetBeans
 ├── 📁 src/
 │   └── 📁 java/
