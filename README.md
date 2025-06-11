@@ -256,8 +256,8 @@ Untuk pengembangan di masa depan, beberapa fitur dapat ditambahkan untuk meningk
 ## Tim Pengembang
 
 * **Raisha Amalia** (2311110002)
-* **Destina Bekti** (23111100)
-* **Muhammad Randy** (23111100)
+* **Muhammad Randy** (2311110015)
+* **Destina Bekti** (2311110018)
 * **Fauzan Arrizal** (2311110021)
 
 ## Lisensi
